@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Бот Настя</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="img/heart.png" type="image/x-icon">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="main">
+			<div class="header">
+				<img
+					src="https://sun9-79.userapi.com/impg/fpO9TOrzuIgwoN9c9d5J7tu0FZaZ1Y30AoBytA/VY46ltAnU6w.jpg?size=1627x2160&quality=95&sign=74035730d7d2d5ca6251ad83d9abdd9b&type=album"
+					alt="">
+				<div class="nameBlock">
+					<h3 id="name">Анастасия Котрина</h3>
+					<p id="subName">Online</p>
+				</div>
+			</div>
+			<div class="messages center" id="messages">
+				<p id="GoDialog">Начните диалог</p>
+			</div>
+			<div class="block-vvod-go">
+				<div class="clip">
+					<label for="">
+						<img src='img/clip.png' alt='загрузить фото' onclick='f.click()'></img>
+						<input type="file" id=f hidden />
+					</label>
+
+				</div>
+				<input id="vvod" class="vvod" type="text" placeholder="Напишите сообщение...">
+				<button id="go" class="go">Отправить</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+
+</html>
