@@ -10,8 +10,7 @@ function PressGo() {
 		let textMes = vvod.value;
 
 		var divR = document.createElement("divR");
-		divR.style.display = "flex";
-		divR.style.justifyContent = "flex-end";
+
 
 		let dvoe;
 		if (date.getMinutes() >= 10) {
@@ -196,14 +195,13 @@ function PressGo() {
 
 
 			var divBot = document.createElement("divBot");
-			divBot.style.display = "flex";
-			divBot.style.justifyContent = "flex-start";
-			divBot.innerHTML = '<div class="blokMes">' + BotMessage + '<span class="time">' + date.getHours() + dvoe + date.getMinutes() + '</span></div>';
+
+			divBot.innerHTML = '<div class="blokMesbot">' + BotMessage + '<span class="time">' + date.getHours() + dvoe + date.getMinutes() + '</span></div>';
 			messages.appendChild(divBot);
 			subName.innerHTML = "Online";
 		}
 
-		setTimeout(MesBotText, 1500);
+		setTimeout(MesBotText, 1900);
 	}
 
 

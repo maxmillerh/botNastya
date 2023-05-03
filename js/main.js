@@ -20,4 +20,16 @@ vvod.onkeyup = function (e) {
 
 
 
+mediaQuery = window.matchMedia("screen and (max-width: 768px)");
+mediaQuery.addListener(changePlaceholder);
+
+function changePlaceholder(mq) {
+	if (mq.matches) {
+		vvod.setAttribute('placeholder', 'Сообщение');
+	} else {
+		vvod.setAttribute('placeholder', 'Напишите сообщение...');
+
+	}
+}
+changePlaceholder(mediaQuery);
 

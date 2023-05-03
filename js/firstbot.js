@@ -36,9 +36,8 @@ function BotFirst() {
 	}
 
 	var divBot = document.createElement("divBot");
-	divBot.style.display = "flex";
-	divBot.style.justifyContent = "flex-start";
-	divBot.innerHTML = '<div class="blokMes">' + BotFirstText + '<span class="time">' + date.getHours() + dvoe + date.getMinutes() + '</span></div>';
+
+	divBot.innerHTML = '<div class="blokMesbot">' + BotFirstText + '<span class="time">' + date.getHours() + dvoe + date.getMinutes() + '</span></div>';
 	messages.appendChild(divBot);
 
 	subName.innerHTML = "Online";

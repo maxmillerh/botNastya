@@ -1,11 +1,19 @@
+
+@font-face {
+	font-family: vksans;
+	src: url(../fonts/vkSansReg.ttf);
+	src: url(../fonts/vkSansMed.ttf);
+}
+
+
 body{
 	background-color: rgb(236, 236, 236);
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	font-size: 15px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+	font-family: vksans, sans-serif;
+	color: #232424 ;}
 /* 
 .right{
 display: flex;
@@ -96,18 +104,35 @@ outline:none;
 	cursor: pointer;
 }
 
-.blokMes{
+.blokMes, .blokMesbot{
 	position: relative;
 	max-width: 60%;
 	display: flex;
 	align-items: center;
 	padding: 8px 50px 12px 14px;
-	background-color: #f1f1f1;
+	background-color: #e6e4e4;
+
 	border-radius: 20px;
 	margin: 4px 0;
 	line-height: 22px;
 	overflow-wrap: break-word;
 }
+
+.blokMesbot{
+	background-color: #f1f1f1;
+}
+
+divr{
+	display: flex;
+	justify-content: flex-end;
+}
+
+divBot{
+	display: flex;
+	justify-content: flex-start;
+}
+
+
 
 .block-vvod-go{
 	margin-top: 16px;
