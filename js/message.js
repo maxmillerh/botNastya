@@ -7,6 +7,10 @@ function PressGo() {
 		messages.classList.remove('center');
 		GoDialog.classList.add('d-none');
 
+		timeAnswer = 0;
+		x = true;
+
+
 		let textMes = vvod.value;
 
 		var divR = document.createElement("divR");
@@ -186,6 +190,8 @@ function PressGo() {
 		function MesBotText() {
 			let date = new Date();
 
+		
+
 			let dvoe;
 			if (date.getMinutes() >= 10) {
 				dvoe = ':';
@@ -199,6 +205,8 @@ function PressGo() {
 			divBot.innerHTML = '<div class="blokMesbot">' + BotMessage + '<span class="time">' + date.getHours() + dvoe + date.getMinutes() + '</span></div>';
 			messages.appendChild(divBot);
 			subName.innerHTML = "Online";
+
+
 		}
 
 		setTimeout(MesBotText, 1900);

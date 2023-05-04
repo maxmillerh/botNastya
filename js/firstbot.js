@@ -4,6 +4,8 @@ function BotFirst() {
 
 	let date = new Date();
 
+
+
 	let dvoe;
 	if (date.getMinutes() >= 10) {
 		dvoe = ':';
@@ -18,9 +20,24 @@ function BotFirst() {
 
 	let BotFirstText;
 	if (randomFirst < 40) { // 40% Шанс
-		arr = ["Как вы себя чувствуете?", "Пошла работать", "Как встать то"];
+		var arr = [];
+		arr[0] = {
+			message: "Как вы себя чувствуете?",
+			mood: 1,
+			topic: "Забота"
+		}
+		arr[0] = {
+			message: "Пошла работать",
+			mood: -2,
+			topic: "Работа"
+		}
+		arr[0] = {
+			message: "Как встать то",
+			mood: -2,
+			topic: "Физактив"
+		}
 		random = Math.floor(Math.random() * (arr.length - 0)) + 0;
-		BotFirstText = arr[random];
+		BotFirstText = arr[random].message;
 	} else if (randomFirst >= 40 && randomFirst < 70) { // 30% Шанс
 		arr = ["Я тебя люблю", "Иди сюда, я соскучилась", "Девочки зовут курить"];
 		random = Math.floor(Math.random() * (arr.length - 0)) + 0;
@@ -35,12 +52,39 @@ function BotFirst() {
 		BotFirstText = arr[random];
 	}
 
-	var divBot = document.createElement("divBot");
+	if (timeAnswer > timebespoc) {
+		arr = ['Куда пропал?', 'Куда делся?', 'Ну все, пропал'];
+		random = Math.floor(Math.random() * (arr.length - 0)) + 0;
+		BotFirstText = arr[random];
+	}
 
+	var divBot = document.createElement("divBot");
 	divBot.innerHTML = '<div class="blokMesbot">' + BotFirstText + '<span class="time">' + date.getHours() + dvoe + date.getMinutes() + '</span></div>';
 	messages.appendChild(divBot);
-
 	subName.innerHTML = "Online";
 }
 
-setInterval(BotFirst, 60000);
+function TimerAnswer() {
+	timeAnswer = timeAnswer + 5;
+	console.log(timeAnswer);
+}
+setInterval(TimerAnswer, 5000);
+
+function Proverka() {
+	if (x == true) {
+		if (timeAnswer <= timemolcan) {
+			BotFirst();
+		} else if (timeAnswer > timemolcan && timeAnswer <= timebespoc) {
+			//ничего не происходит
+		} else {
+			BotFirst();
+			x = false;
+		}
+	}
+}
+setInterval(Proverka, timefirstmessage);
+
+
+
+
+
